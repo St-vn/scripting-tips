@@ -3,6 +3,8 @@
 ## Balance between readability, scalability and optimizations
 - Although having a performant game is nice, a lot of time can be wasted through applying negligible optimizations while also sacrificing both scalability and readibility. Here's an example of micro optimized code vs regular code
 
+**Scalibility** : "the ability of a computing process to be used or produced in a range of capabilities."*
+
 ```lua
 local InputService = game:GetService("UserInputService")
 local Remotes = game.ReplicatedStorage.Remotes -- not using :GetService() because they're afraid of a function call
@@ -56,8 +58,6 @@ table.insert(Table, "hi") -- good
 
 Table[#Table + 1] = "hi" -- bad
 ```
-
-**Scalibility** : "the ability of a computing process to be used or produced in a range of capabilities."*
 
 ## Being stuck
 - It's easy to dig yourself in a bottomless pit by taking bad approaches then slapping bandaids constantly and blindly thinking.
