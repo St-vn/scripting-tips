@@ -38,9 +38,9 @@ local PascalCase = true
 local InconsistentCasing = false
 
 local function UselessFunction()
-     local Cooldown = "Cooldown"
+    local Cooldown = "Cooldown"
 
-     if Cooldown == "1" then
+    if Cooldown == "1" then
         local Position = Vector3.new(1, 1, 1)
     end
 
@@ -50,7 +50,7 @@ end
 - Use conventional and idiomatic methods.
 ```lua
 table.insert(Table, "hi") -- good
-  
+
 Table[#Table + 1] = "hi" -- bad
 ```
 **Scalibility** : "the ability of a computing process to be used or produced in a range of capabilities."*
