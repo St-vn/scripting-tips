@@ -9,7 +9,7 @@
 local InputService = game:GetService("UserInputService")
 local Remotes = game.ReplicatedStorage.Remotes -- not using :GetService() because they're afraid of a function call
 
-if 2 < Variable then -- always using "<" because ">" translates to "<"
+if 2 < Variable then -- always using "<" because ">" translates to "<", a very micro optimization
 
 end
 
@@ -18,7 +18,7 @@ end
 local InputService = game:GetService("UserInputService")
 local Remotes = game:GetService("ReplicatedStorage").Remotes -- staying consistent with the usage of :GetService() above
 
-if Variable > 2 then -- placing the longer expression at the left is a good convention but you lost 1 nanosecond doe :CCCCCC
+if Variable > 2 then -- placing the longer expression on the left can improve readability but you lose 1 nanosecond though :CCCCCC
 
 end
 ```
