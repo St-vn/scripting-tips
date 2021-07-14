@@ -16,7 +16,7 @@ end
 -- vs
 
 local InputService = game:GetService("UserInputService")
-local Remotes = game:GetService("ReplicatedStorage").Remotes -- staying consistent with 
+local Remotes = game:GetService("ReplicatedStorage").Remotes -- staying consistent with the usage of :GetService() above
 
 if Variable > 2 then -- placing the longer expression at the left is a good convention but you lost 1 nanosecond doe :CCCCCC
 
@@ -122,6 +122,13 @@ while true do
     wait(1)
 end
 ```
+
+## OOP
+- OOP is a programming paradigm, this part assumes you already know what it is so skip it if you don't know what OOP is.
+
+- This programming paradigm is widely misused, remember this is Roblox we're talking about you don't need to make everything(or anything at all) object-oriented.
+
+- OOP is only needed in Roblox when you're working with other scripters to facilitate usage of your co-workers' code. It's useful when making open sourced code as well.
 
 ## Simplify your code
 - Keep your code simple and tidy, no need to make your code more complex than needed.
