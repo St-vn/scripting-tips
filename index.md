@@ -143,6 +143,4 @@ end
 - Touch some grass will ya?
 
 ## Improvement
-- If you've written some code, it's a good idea to receive feedback from an outer perspective to further improve it.
-
-- Receiving feedback is great because you can learn something new or discover mishaps.
+- If you've written some code, it's a good idea to receive feedback from an outer perspective to further improve it while also learning something new.
