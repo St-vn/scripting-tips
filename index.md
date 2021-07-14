@@ -9,7 +9,7 @@
 local InputService = game:GetService("UserInputService")
 local Remotes = game.ReplicatedStorage.Remotes -- not using :GetService() because they're afraid of a function call
 
-if 2 < Variable then -- always using "<" because ">" translates to "<", a very micro optimization
+if 2 < Variable then -- uses "<" because ">" translates to "<", a very micro optimization
 
 end
 
