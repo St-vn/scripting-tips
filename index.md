@@ -44,7 +44,7 @@ local function UselessFunction()
         local Position = Vector3.new(1, 1, 1)
     end
 
-    return "idk man"
+    return "ik man"
 end
 ```
 - Use conventional and idiomatic methods.
