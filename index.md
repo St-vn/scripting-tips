@@ -21,6 +21,7 @@ if Variable > 2 then -- placing the longer expression at the left is a good conv
 end
 ```
 - Readable code is crucial especially when you want to present it to other people(or if you're working in a team) or when you go back to tweak it after a while so its semantics can be analyzed quickly.
+
 ```lua
 local PascalCase = true
 local inconsistent_Casing = true
@@ -47,12 +48,15 @@ local function UselessFunction()
     return "ik man"
 end
 ```
+
 - Use conventional and idiomatic methods.
+
 ```lua
 table.insert(Table, "hi") -- good
 
 Table[#Table + 1] = "hi" -- bad
 ```
+
 **Scalibility** : "the ability of a computing process to be used or produced in a range of capabilities."*
 
 ## Being stuck
