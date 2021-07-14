@@ -3,7 +3,7 @@
 ## Balance between readability, scalability and optimizations
 - Although having a performant game is nice, a lot of time can be wasted through applying negligible optimizations while also sacrificing both scalability and readibility. Here's an example of micro optimized code vs regular code
 
-**Scalibility** : "the ability of a computing process to be used or produced in a range of capabilities."*
+  **Scalibility** : "the ability of a computing process to be used or produced in a range of capabilities."*
 
 ```lua
 local InputService = game:GetService("UserInputService")
@@ -59,6 +59,73 @@ table.insert(Table, "hi") -- good
 Table[#Table + 1] = "hi" -- bad
 ```
 
+## Comments
+- Using comments can help make your code more readable, or the opposite. You'll almost never need to use comments if you're working alone. But if you do, then you should make them as explicit as possible.
+
+*Bad use of comments :*
+
+```lua
+-- Variables
+
+local Humanoid = Humanoid -- this is where the humanoid is declared
+
+-- Events
+
+Humanoid.HealthChanged:Connect(function() -- you can use .Died event but for the sake of this example I won't.
+    if Humanoid.Health <= 0 then -- checks if player has died
+        -- Random comment to make this code harder to reade
+    end
+end)
+```
+
+*Okay use of comments :*
+
+```lua
+local Humanoid = Humanoid
+
+Humanoid.HealthChanged:Connect(function() -- does something when the humanoid dies
+    if Humanoid.Health <= 0 then
+        -- do something
+    end
+end)
+```
+
+## DRY(Don't Repeat Yourself)
+- Declare a variable for something that you're using multiple times, use loops and functions for repeated tasks, don't use a hundred scripts and use modules to handle the tasks instead.
+
+ * If you had to handle a group of NPCs, then you should be looping through each npc and handle them accordingly like this :
+
+```lua
+local function Attack(Attacker, Target)
+    -- do stuff
+end
+
+while true do
+    for _, Mob in ipairs(List) do
+        if WithinRange then
+            Attack(Mob, Target)
+        end
+    end
+
+    wait(1)
+end
+```
+
+ * Instead of using individual scripts for every NPC like this :
+
+```lua
+while true do
+    if WithinRange then
+        -- do stuff
+    end
+
+    wait(1)
+end
+```
+
+## Simplify your code
+- Keep your code simple and tidy, no need to make your code more complex than needed.
+
 ## Being stuck
 - It's easy to dig yourself in a bottomless pit by taking bad approaches then slapping bandaids constantly and blindly thinking.
 
@@ -72,12 +139,3 @@ Table[#Table + 1] = "hi" -- bad
 - If you've written some code, it's a good idea to receive feedback from an outer perspective to further improve it.
 
 - Receiving feedback is great because you can learn something new or discover mishaps.
-
-## DRY(Don't Repeat Yourself)
-- Declare a variable for something that you're using multiple times, use loops and functions for repeated tasks, don't use a hundred scripts and use modules to handle the tasks instead.
-
-## Simplify your code
-- Keep your code simple and tidy, no need to make your code more complex than needed.
-
-## Comments
-- Using comments can help make your code more readable, or the opposite. You'll almost never need to use comments if you're working alone. But if you do, then you should make them as explicit as possible.
