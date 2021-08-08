@@ -52,11 +52,46 @@ end
 
 - Use conventional and idiomatic methods to avoid confusion, also because they're likely to get optimized[3].
 
-```lua
-table.insert(Table, "hi") -- good
+Here's a few examples of non-idiomatic vs code idiomatic
 
+```lua
 Table[#Table + 1] = "hi" -- bad
+
+table.insert(Table, "hi") -- good
 ```
+
+```lua
+-- bad
+
+local function Iterate(Array, Index)
+    Index = (Index and Index + 1) or 1
+
+    return Table[Index], Index
+end
+
+for i, v in Iterate, Table do
+
+end
+
+-- good
+
+for i, v in ipairs(Table) do
+
+end
+```
+
+Here's an example of unconventional and conventional code
+
+```lua
+for i = 1, #Array do -- bad
+    local v = Array[i]
+end
+
+for i, v in ipairs(Array) do -- good
+    
+end
+```
+
 
 ## Comments
 - Using comments can help make your code more readable, or the opposite. Comments should be used to guide the reader like avoiding semantical confusion instead of telling what part of the code does what. In the following example(for some reason the person decided to overcomplicate the if statement), it shows what should be avoided and what could be done instead.
